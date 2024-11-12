@@ -1,5 +1,5 @@
 import React from "react";
-import "./AmenitiesSection.css";  // Style it with your own CSS
+import "./AmenitiesSection.css"; 
 
 function AmenitiesSection() {
   return (
