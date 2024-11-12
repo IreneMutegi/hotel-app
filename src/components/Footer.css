@@ -1,0 +1,77 @@
+/* src/components/Footer.css */
+
+.footer {
+    background-color: #0077b6;  /* Ocean-like blue */
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f0f8ff;  /* Light sky blue for section titles */
+  }
+  
+  .footer-section p,
+  .footer-section form {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #d6f5ff;  /* Light blue text */
+  }
+  
+  .email-input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #00b4d8;  /* Light blue border */
+    background-color: #e0f7fa;  /* Pale blue background */
+  }
+  
+  .subscribe-button {
+    padding: 8px 15px;
+    background-color: #00b4d8;  /* Tropical blue */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #0098b8;  /* Darker blue for hover effect */
+  }
+  
+  .social-icons a {
+    display: block;
+    color: white;
+    margin: 5px 0;
+    font-size: 1em;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #00b4d8;  /* Blue hover effect on social links */
+  }
+  
+  .footer-bottom {
+    background-color: #3b6c76;  /* Deeper ocean blue */
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #f0f8ff;  /* Light blue text for footer bottom */
+  }
+  
