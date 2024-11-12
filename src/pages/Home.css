@@ -1,9 +1,12 @@
+
 .home-container {
     font-family: Arial, sans-serif;
     padding: 20px;
     text-align: center;
+    background-color: #f4f4f4; 
   }
   
+  /* Styling for Intro Section */
   .intro-section {
     margin-bottom: 40px;
   }
@@ -16,37 +19,43 @@
   
   .home-description {
     font-size: 1.1em;
-    color: #666;
+    color: #666; 
     max-width: 600px;
     margin: 0 auto 20px;
   }
   
   .home-image {
-    width: 80%;
-    max-width: 600px;
+    width: 100%;            
+    max-width: 600px;       
+    height: auto;           
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 10px auto;      
+    display: block;
   }
+  
+  
   
   .cta-button {
     padding: 10px 20px;
     font-size: 1.1em;
     color: #fff;
-    background-color: #0066cc;
+    background-color: #0066cc; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .cta-button:hover {
-    background-color: #005bb5;
+    background-color: #005bb5; 
   }
   
+  /* Styling for Amenities Section */
   .amenities-section {
-    background-color: #f9f9f9;
+    background-color: #fff; 
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   }
   
   .amenities-list {
@@ -60,6 +69,7 @@
     margin: 10px 0;
   }
   
+
   .testimonials-section {
     margin-top: 30px;
   }
@@ -71,8 +81,10 @@
   
   .testimonial {
     font-style: italic;
-    color: #555;
+    color: #555; 
     max-width: 600px;
     margin: 10px auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   

@@ -1,38 +1,16 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-/* define the NavBar component */
 function NavBar() {
   return (
     <nav>
-      <NavLink
-        to="/"
-    
-        className="nav-link"
-      >
-        Home
-      </NavLink>
-     
-      <NavLink
-        to="/BookingForm"
-        className="nav-link"
-      >
-        BookingForm
-      </NavLink>
-      <NavLink
-        to="/rooms"
-        className="nav-link"
-      >
-        Rooms
-      </NavLink>
-      <NavLink
-        to="/contact"
-        className="nav-link"
-      >
-        Contact
-      </NavLink>
-    </nav>
+      <NavLink to="/" className="nav-link">Home</NavLink>
+      <NavLink to="/amenities" className="nav-link">Amenities</NavLink>
+      <NavLink to="/profile" className="nav-link">Profile</NavLink>
+      <NavLink to="/login" className="nav-link">Login</NavLink>
+   </nav>
   );
-};
+}
 
 export default NavBar;
