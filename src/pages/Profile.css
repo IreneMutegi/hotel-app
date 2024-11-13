@@ -1,0 +1,87 @@
+/* Profile container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .profile-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* User Info Section */
+  .user-info {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-info h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .user-info p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Bookings Section */
+  .bookings-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bookings-section h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .bookings-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bookings-section li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  /* Loading State */
+  .loading {
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+    padding: 40px;
+  }
+  

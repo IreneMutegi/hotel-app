@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Jane Doe",
+      "username": "janedoe@example.com",
+      "password": "password123"
+    },
+    {
+      "id": "d190",
+      "name": "",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "7295",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "68a6",
+      "name": "",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "0e4b",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "8af5",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "6240",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "919c",
+      "name": "FAITH",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "79e8",
+      "name": "FAITH",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "4556",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "4b9c",
+      "name": "faith",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "07f1",
+      "name": "Irene",
+      "username": "faithclient@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "a21d",
+      "name": "joon",
+      "username": "joon@gmail.com",
+      "password": "Kimathi8230"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1",
+      "room": "Executive Suite",
+      "cost": "$200/night",
+      "description": "Spacious suite with king-sized bed and private balcony.",
+      "bookingDate": "2024-11-15",
+      "bookingTime": "14:00",
+      "clientName": "John Doe",
+      "clientEmail": "johndoe@example.com"
+    },
+    {
+      "id": "7d20",
+      "room": "Beachfront Double Room",
+      "cost": "$120/night",
+      "description": "Cozy room with a beachfront view and two beds.",
+      "image": "data:image/jpeg;base64,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",
+      "bookingDate": "2024-11-15",
+      "bookingTime": "02:46",
+      "clientName": "good",
+      "clientEmail": "good@gmail.com"
+    },
+    {
+      "id": "bcd2",
+      "room": "Beachfront Double Room",
+      "cost": "$120/night",
+      "description": "Cozy room with a beachfront view and two beds.",
+      "image": "data:image/jpeg;base64,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",
+      "bookingDate": "2024-11-22",
+      "bookingTime": "04:45",
+      "clientName": "good",
+      "clientEmail": "good@gmail.com"
+    }
+  ],
+  "bookedAmenities": [
+    {
+      "userId": 1,
+      "amenities": [
+        {
+          "name": "Spa",
+          "description": "Full access to luxury spa treatments.",
+          "cost": "$50"
+        },
+        {
+          "name": "Gym",
+          "description": "24/7 access to gym facilities.",
+          "cost": "$30"
+        }
+      ],
+      "id": "2bc7"
+    }
+  ]
+}

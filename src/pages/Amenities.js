@@ -1,18 +1,20 @@
-import React from 'react';
-import './Amenities.css';
-import pool from "../assets/images/outdoorpool.jpeg";  
-import spa from "../assets/images/spaservice.jpeg";
-import gym from "../assets/images/fitness.jpeg";
-import canoeing from "../assets/images/canoeing.jpeg";
-import finedining from "../assets/images/finedining.jpeg";
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import pool from "../assets/images/outdoorpool.jpeg";  // Example image
+import spa from "../assets/images/spaservice.jpeg";   // Example image
+import gym from "../assets/images/fitness.jpeg";     // Example image
+import canoeing from "../assets/images/canoeing.jpeg"; // Example image
+import finedining from "../assets/images/finedining.jpeg"; // Example image
+import './Amenities.css'; 
+// Define amenitiesData or import it if stored externally
 const amenitiesData = [
   {
     emoji: '🌐',
     title: 'Free Wi-Fi',
     description: 'Enjoy high-speed internet access throughout the hotel for all your work and entertainment needs.',
     image: null,
-    buttonText: 'Access Now',  
+    buttonText: 'Access Now',
+    password: 'WiFi1234',
   },
   {
     emoji: '🏊‍♂️',
@@ -51,7 +53,45 @@ const amenitiesData = [
   },
 ];
 
-const Amenities = () => {
+const Amenities = ({ setBookingInfo }) => {
+  const [selectedAmenity, setSelectedAmenity] = useState(null);
+  const [bookingDate, setBookingDate] = useState("");
+  const [bookingTime, setBookingTime] = useState("");
+  const [clientName, setClientName] = useState("");
+  const [clientEmail, setClientEmail] = useState("");
+  const [wifiPassword, setWifiPassword] = useState(null);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleBookingClick = (amenity) => {
+    setSelectedAmenity(amenity);
+    setError(""); // Reset error message
+  };
+
+  const handleAccessNowClick = () => {
+    setWifiPassword('WiFi1234');
+  };
+
+  const handleBookingSubmit = (e) => {
+    e.preventDefault();
+    if (selectedAmenity && bookingDate && bookingTime && clientName && clientEmail) {
+      const bookingDetails = {
+        amenity: selectedAmenity.title,
+        bookingDate,
+        bookingTime,
+        clientName,
+        clientEmail,
+      };
+
+      setBookingInfo(bookingDetails); // Corrected to match the prop name
+
+      alert(`Booking confirmed for ${selectedAmenity.title} on ${bookingDate} at ${bookingTime}`);
+      navigate("/profile");
+    } else {
+      setError("Please fill all fields and select an amenity.");
+    }
+  };
+
   return (
     <div className="amenities-container">
       <h2>Our Amenities</h2>
@@ -63,11 +103,79 @@ const Amenities = () => {
               <h3>{amenity.title}</h3>
             </div>
             {amenity.image && <img src={amenity.image} alt={amenity.title} className="amenity-image" />}
-            <p>{amenity.description}</p>
-            <button className="book-now-btn">{amenity.buttonText}</button>
+            <div className="amenity-content">
+              <p className="amenity-description">{amenity.description}</p>
+              <div className="button-container">
+                {amenity.title === 'Free Wi-Fi' ? (
+                  <button 
+                    className="book-now-btn" 
+                    onClick={handleAccessNowClick}
+                  >
+                    {amenity.buttonText}
+                  </button>
+                ) : (
+                  <button 
+                    className="book-now-btn" 
+                    onClick={() => handleBookingClick(amenity)}
+                  >
+                    {amenity.buttonText}
+                  </button>
+                )}
+                {wifiPassword && amenity.title === 'Free Wi-Fi' && (
+                  <div className="wifi-password">
+                    <p><strong> Wi-Fi Password:</strong> {wifiPassword}</p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </div>
+      {selectedAmenity && (
+        <div className="booking-form">
+          <h3>Booking {selectedAmenity.title}</h3>
+          <form onSubmit={handleBookingSubmit}>
+            <label>
+              Client Name:
+              <input 
+                type="text" 
+                value={clientName} 
+                onChange={(e) => setClientName(e.target.value)} 
+                required 
+              />
+            </label>
+            <label>
+              Client Email:
+              <input 
+                type="email" 
+                value={clientEmail} 
+                onChange={(e) => setClientEmail(e.target.value)} 
+                required 
+              />
+            </label>
+            <label>
+              Select Date:
+              <input 
+                type="date" 
+                value={bookingDate} 
+                onChange={(e) => setBookingDate(e.target.value)} 
+                required 
+              />
+            </label>
+            <label>
+              Select Time:
+              <input 
+                type="time" 
+                value={bookingTime} 
+                onChange={(e) => setBookingTime(e.target.value)} 
+                required 
+              />
+            </label>
+            <button type="submit" className="confirm-booking-btn">Confirm Booking</button>
+            {error && <p className="error-message">{error}</p>}
+          </form>
+        </div>
+      )}
     </div>
   );
 };
