@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebook, faApple } from "@fortawesome/free-brands-svg-icons"; // Import Font Awesome icons
-import "./Login.css"; // Import the CSS file
+import "./Login.css"; 
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -15,7 +15,7 @@ function Login() {
   return (
     <div id="login-page">
       <div className="login-icon">
-        <span role="img" aria-label="login-icon">🔑</span> {/* Placeholder for icon */}
+        <span role="img" aria-label="login-icon">🔑</span> 
       </div>
       <h2>Sign in with email</h2>
       <p>Sign in to manage your bookings, view exclusive offers, and more!</p>
