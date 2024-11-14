@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/hotel-app/static/css/main.3cce826e.css",
-    "main.js": "/hotel-app/static/js/main.7c9102e4.js",
+    "main.css": "/hotel-app/static/css/main.10c95316.css",
+    "main.js": "/hotel-app/static/js/main.6f68f115.js",
     "static/media/fa-solid-900.ttf": "/hotel-app/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
-    "static/media/family.webp": "/hotel-app/static/media/family.7e655f69332c065d9061.webp",
     "static/media/fa-brands-400.ttf": "/hotel-app/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/hotel-app/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
     "static/media/logo.png": "/hotel-app/static/media/logo.1c93c42ae4b8c99f7782.png",
     "static/media/fa-brands-400.woff2": "/hotel-app/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
     "static/media/fa-regular-400.ttf": "/hotel-app/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
-    "static/media/Golf-View.webp": "/hotel-app/static/media/Golf-View.b3a1d5f19bbf8e939335.webp",
-    "static/media/Executive-Suite.webp": "/hotel-app/static/media/Executive-Suite.77ae6effcf66b66b04be.webp",
     "static/media/fa-regular-400.woff2": "/hotel-app/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
     "static/media/fitness.jpeg": "/hotel-app/static/media/fitness.69a15da0887cda9bfd5f.jpeg",
+    "static/media/slide3.jpeg": "/hotel-app/static/media/slide3.406a239d74c50724779a.jpeg",
+    "static/media/room3.jpeg": "/hotel-app/static/media/room3.5927f469c04726afedf6.jpeg",
     "static/media/canoeing.jpeg": "/hotel-app/static/media/canoeing.26f054916bb3110a7d5d.jpeg",
     "static/media/fa-v4compatibility.ttf": "/hotel-app/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/finedining.jpeg": "/hotel-app/static/media/finedining.7546e96909ca2864bd3e.jpeg",
     "static/media/background.jpeg": "/hotel-app/static/media/background.b70bcec7ce0a59174fb8.jpeg",
     "static/media/fa-v4compatibility.woff2": "/hotel-app/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/hotel-app/index.html",
-    "main.3cce826e.css.map": "/hotel-app/static/css/main.3cce826e.css.map",
-    "main.7c9102e4.js.map": "/hotel-app/static/js/main.7c9102e4.js.map"
+    "main.10c95316.css.map": "/hotel-app/static/css/main.10c95316.css.map",
+    "main.6f68f115.js.map": "/hotel-app/static/js/main.6f68f115.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cce826e.css",
-    "static/js/main.7c9102e4.js"
+    "static/css/main.10c95316.css",
+    "static/js/main.6f68f115.js"
   ]
 }
