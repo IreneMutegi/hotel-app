@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Amenities from "./pages/Amenities";
@@ -31,7 +31,7 @@ function App() {
   };
 
   // Check if user is already logged in when app loads
-  React.useEffect(() => {
+  useEffect(() => {
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo) {
       setUserInfo(JSON.parse(storedUserInfo)); // Set user info from localStorage if available

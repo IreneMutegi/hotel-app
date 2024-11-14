@@ -15,7 +15,7 @@ function Footer() {
 
         {/* Subscribe Section */}
         <div className="footer-section">
-          <h3>Subscribe to Our Emails</h3>
+          <h3>Subscribe to Our Mail List</h3>
           <form>
             <input
               type="email"

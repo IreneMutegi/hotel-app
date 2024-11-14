@@ -65,6 +65,12 @@
       "name": "james",
       "username": "jamesn@gmail.com",
       "password": "Kimathi8230"
+    },
+    {
+      "id": "df36",
+      "name": "irene",
+      "username": "irene@gmail.com",
+      "password": "Kimathi8230"
     }
   ],
   "bookings": [
@@ -145,6 +151,16 @@
       "bookingTime": "06:20",
       "clientName": "gg",
       "clientEmail": "gg@gmail.com"
+    },
+    {
+      "id": "d465",
+      "room": "Tropical Oasis",
+      "cost": "$500/night",
+      "description": "Top-notch suite with exceptional amenities.",
+      "bookingDate": "2024-11-20",
+      "bookingTime": "02:44",
+      "clientName": "irene",
+      "clientEmail": "irene@gmail.com"
     }
   ],
   "amenities": [
