@@ -161,6 +161,14 @@
       "bookingTime": "02:44",
       "clientName": "irene",
       "clientEmail": "irene@gmail.com"
+    },
+    {
+      "id": "dcd0",
+      "amenity": "Spa Services",
+      "bookingDate": "2024-11-20",
+      "bookingTime": "01:19",
+      "clientName": "irene",
+      "clientEmail": "irene@gmail.com"
     }
   ],
   "amenities": [

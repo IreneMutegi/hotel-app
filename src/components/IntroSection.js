@@ -99,7 +99,7 @@ function IntroSection({ userInfo, existingBooking }) {
 
     try {
       // Send room and booking details to the server (replace with your endpoint)
-      const response = await fetch('http://localhost:5000/bookings', {
+      const response = await fetch('https://hotel-app-75bj.onrender.com/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

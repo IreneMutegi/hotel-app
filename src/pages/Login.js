@@ -27,7 +27,7 @@ function Login({ onLogin }) {
     const loginData = { name, username, password };
 
     try {
-      const response = await fetch("http://localhost:5000/users", {
+      const response = await fetch("https://hotel-app-75bj.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),

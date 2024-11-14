@@ -94,7 +94,7 @@ const Amenities = ({ setBookingInfo, userInfo }) => {
 
       // POST request to save booking details
       try {
-        const response = await fetch("http://localhost:5000/bookings", {
+        const response = await fetch("https://hotel-app-75bj.onrender.com/bookings", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
