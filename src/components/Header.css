@@ -5,7 +5,7 @@
   align-items: center;
   height: 250px; /* Reduced height for a smaller header */
   background-color: #333;  /* Dark background color */
-  background-image: url("../assets/images/background.jpeg"); /* Optional background image */
+  background-image: url("../assets/images/background.jpeg"); 
   background-size: cover;
   background-position: center;
   color: white;

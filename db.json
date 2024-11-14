@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "email": "johndoe@example.com",
       "password": "password123"
@@ -53,11 +53,23 @@
       "name": "hgh",
       "username": "joon@gmail.com",
       "password": "Kimathi8230"
+    },
+    {
+      "id": "4e44",
+      "name": "gg",
+      "username": "joon@gmail.com",
+      "password": "Kimathi8230"
+    },
+    {
+      "id": "c932",
+      "name": "james",
+      "username": "jamesn@gmail.com",
+      "password": "Kimathi8230"
     }
   ],
   "bookings": [
     {
-      "id": 1,
+      "id": "1",
       "clientName": "John Doe",
       "clientEmail": "johndoe@example.com",
       "room": "Executive Suite",
@@ -68,7 +80,7 @@
       "amenity": null
     },
     {
-      "id": 2,
+      "id": "2",
       "clientName": "Jane Smith",
       "clientEmail": "janesmith@example.com",
       "room": null,
@@ -137,38 +149,38 @@
   ],
   "amenities": [
     {
-      "id": 1,
+      "id": "1",
       "emoji": "🌐",
       "title": "Free Wi-Fi",
       "description": "Enjoy high-speed internet access throughout the hotel for all your work and entertainment needs.",
       "password": "WiFi1234"
     },
     {
-      "id": 2,
+      "id": "2",
       "emoji": "🏊‍♂️",
       "title": "Outdoor Pool",
       "description": "Relax by our outdoor pool, offering a perfect spot for a refreshing swim and sunbathing."
     },
     {
-      "id": 3,
+      "id": "3",
       "emoji": "🍽",
       "title": "Fine Dining Restaurant",
       "description": "Indulge in gourmet dishes prepared by world-class chefs in a luxurious dining setting."
     },
     {
-      "id": 4,
+      "id": "4",
       "emoji": "💆",
       "title": "Spa Services",
       "description": "Relax and rejuvenate with our variety of spa treatments designed to provide ultimate relaxation."
     },
     {
-      "id": 5,
+      "id": "5",
       "emoji": "🏋️‍♀️",
       "title": "Fitness Center",
       "description": "Stay fit and healthy in our fully equipped fitness center, featuring the latest workout equipment."
     },
     {
-      "id": 6,
+      "id": "6",
       "emoji": "🚣‍♀️",
       "title": "Canoeing",
       "description": "Explore the waters with our exciting canoeing experience."

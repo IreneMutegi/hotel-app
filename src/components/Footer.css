@@ -1,72 +1,70 @@
-/* General Footer Styling */
 .footer {
-  background-color: #005f73;  /* A deeper ocean-like blue */
+  background-color: #005f73;
   color: white;
   font-family: 'Arial', sans-serif;
   text-align: center;
-  padding: 20px 0;  /* Reduced padding for a shorter height */
-  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  padding: 20px 0;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 10px 10px;  /* Reduced padding for the container */
+  padding: 10px 10px;
 }
 
 .footer-section {
-  margin-bottom: 15px;  /* Reduced bottom margin */
-  width: 230px;  /* Reduced width of sections */
+  margin-bottom: 15px;
+  width: 230px;
 }
 
 .footer-section h3 {
-  font-size: 1.2em;  /* Slightly smaller font size */
-  margin-bottom: 10px;  /* Reduced margin between title and content */
+  font-size: 1.2em;
+  margin-bottom: 10px;
   color: #ffffff;
   font-weight: bold;
-  text-transform: uppercase; /* Make section headers more prominent */
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .footer-section p {
-  font-size: 0.9em;  /* Reduced font size */
-  color: #b0e0e6;  /* Soft light blue */
-  line-height: 1.4;  /* Reduced line height */
+  font-size: 0.9em;
+  color: #b0e0e6;
+  line-height: 1.4;
 }
 
 .footer-section a {
   color: #b0e0e6;
   text-decoration: none;
   display: block;
-  margin-bottom: 5px;  /* Reduced space between links */
+  margin-bottom: 5px;
 }
 
 .footer-section a:hover {
   color: #ffffff;
-  text-decoration: underline; /* Subtle hover effect */
+  text-decoration: underline;
 }
 
-/* Horizontal Alignment for Email Input and Subscribe Button */
 .email-subscribe-container {
-  display: flex;  /* Use flexbox for horizontal alignment */
-  justify-content: center;  /* Center the input and button */
-  align-items: center;  /* Vertically align them */
-  gap: 10px;  /* Space between input and button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .email-input,
 .subscribe-button {
-  padding: 12px 20px;  /* Same padding for both elements */
-  font-size: 1em;  /* Same font size */
+  padding: 12px 20px;
+  font-size: 1em;
   border-radius: 30px;
   border: 2px solid #00b4d8;
   background-color: #e0f7fa;
-  width: 45%;  /* Both elements take up equal space */
+  width: 45%;
 }
 
 .subscribe-button {
-  background-color: #00b4d8;  /* Vibrant tropical blue */
+  background-color: #00b4d8;
   border: none;
   color: white;
   cursor: pointer;
@@ -75,27 +73,27 @@
 }
 
 .subscribe-button:hover {
-  background-color: #008c9e;  /* Darker blue on hover */
+  background-color: #008c9e;
 }
 
 .social-icons a {
   display: inline-block;
   color: white;
-  font-size: 1.2em;  /* Slightly smaller icons */
-  margin: 5px 0;  /* Reduced margin between social icons */
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  font-size: 1.2em;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
   color: #00b4d8;
-  transform: scale(1.1); /* Slight scaling effect on hover */
+  transform: scale(1.1);
 }
 
 .footer-bottom {
-  background-color: #003c42;  /* Darker ocean blue */
-  padding: 10px 0;  /* Reduced padding */
-  font-size: 0.85em;  /* Reduced font size */
-  margin-top: 20px;  /* Reduced space before footer-bottom */
+  background-color: #003c42;
+  padding: 10px 0;
+  font-size: 0.85em;
+  margin-top: 20px;
   color: #ffffff;
 }
 
@@ -104,7 +102,6 @@
   text-align: center;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -118,11 +115,11 @@
 
   .email-input,
   .subscribe-button {
-    width: 90%;  /* Full width on small screens */
-    margin-bottom: 10px;  /* Space between email input and button on small screens */
+    width: 90%;
+    margin-bottom: 10px;
   }
 
   .email-subscribe-container {
-    flex-direction: column;  /* Stack the elements vertically on smaller screens */
+    flex-direction: column;
   }
 }

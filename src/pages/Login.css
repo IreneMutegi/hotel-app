@@ -2,8 +2,8 @@
 .login-container {
   display: flex;
   height: 100vh;
-  justify-content: center; /* Centers the container horizontally */
-  align-items: center;     /* Centers the container vertically */
+  justify-content: center; 
+  align-items: center;     
 }
 
 /* Left side: Slideshow container */
@@ -34,8 +34,8 @@
 
 /* Right side: Login form container */
 .login-form-container {
-  width: 30%; /* Adjusted width to make the container smaller */
-  max-width: 400px; /* Ensures the container doesn't stretch too wide */
+  width: 30%;
+  max-width: 400px; 
   padding: 2rem;
   background-color: #4e5e82;
   color: white;
