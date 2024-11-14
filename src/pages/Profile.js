@@ -1,47 +1,67 @@
 import React, { useState, useEffect } from "react";
-import "./Profile.css"; // Import Profile CSS
 
-function Profile({ userInfo, allBookings }) {
-  const [userData, setUserData] = useState(null);
+function Profile() {
+  const [user, setUser] = useState(null);
+  const [bookings, setBookings] = useState([]);
+  const [amenities, setAmenities] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    // Check if user is logged in by checking localStorage
-    const name = localStorage.getItem("clientName");
-    const username = localStorage.getItem("clientUsername");
+    // Retrieve user ID from localStorage
+    const userName = localStorage.getItem("clientName");
+    const userEmail = localStorage.getItem("clientUsername");
 
-    if (name && username) {
-      setUserData({ name, username });
+    if (userName && userEmail) {
+      // Fetch user details
+      setUser({ name: userName, email: userEmail });
+
+      // Fetch bookings related to this user
+      fetch(`http://localhost:5000/bookings?clientEmail=${userEmail}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setBookings(data);
+          // Filter and store booked amenities
+          const bookedAmenities = data.filter((booking) => booking.amenity);
+          setAmenities(bookedAmenities);
+        })
+        .catch((error) => {
+          console.error("Error fetching bookings:", error);
+          setErrorMessage("An error occurred while fetching bookings.");
+        });
     } else {
-      // Redirect to login page if not logged in
-      window.location.href = "/login";
+      setErrorMessage("No user logged in.");
     }
   }, []);
 
-  return (
-    <div className="profile-container">
-      {userData ? (
-        <>
-          <div className="user-info">
-            <h3>Welcome, {userData.name}</h3>
-            <p>Email: {userData.username}</p>
-          </div>
+  if (errorMessage) return <p>{errorMessage}</p>;
+  if (!user) return <p>Loading...</p>;
 
-          <div className="bookings-section">
-            <h3>Your Bookings:</h3>
-            {allBookings.length > 0 ? (
-              <ul>
-                {allBookings.map((booking, index) => (
-                  <li key={index}>{booking.room} - {booking.date}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="empty-state">No bookings yet.</p>
-            )}
-          </div>
-        </>
-      ) : (
-        <div className="loading">Loading...</div>
-      )}
+  return (
+    <div className="profile-page">
+      <h1>Welcome, {user.name}!</h1>
+      <h2>Your Bookings</h2>
+      <ul>
+        {bookings.map((booking, index) => (
+          <li key={index}>
+            <h3>{booking.room || booking.amenity}</h3>
+            <p>{booking.description}</p>
+            <p>Cost: {booking.cost}</p>
+            <p>Date: {booking.bookingDate}</p>
+            <p>Time: {booking.bookingTime}</p>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Booked Amenities</h2>
+      <ul>
+        {amenities.map((amenity, index) => (
+          <li key={index}>
+            <h3>{amenity.amenity}</h3>
+            <p>Date: {amenity.bookingDate}</p>
+            <p>Time: {amenity.bookingTime}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

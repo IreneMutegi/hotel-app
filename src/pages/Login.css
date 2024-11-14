@@ -1,6 +1,9 @@
+/* Container for Login Page */
 .login-container {
   display: flex;
   height: 100vh;
+  justify-content: center; /* Centers the container horizontally */
+  align-items: center;     /* Centers the container vertically */
 }
 
 /* Left side: Slideshow container */
@@ -31,7 +34,8 @@
 
 /* Right side: Login form container */
 .login-form-container {
-  width: 45%; /* Slightly smaller width for spacing */
+  width: 30%; /* Adjusted width to make the container smaller */
+  max-width: 400px; /* Ensures the container doesn't stretch too wide */
   padding: 2rem;
   background-color: #4e5e82;
   color: white;
@@ -39,8 +43,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 2rem; /* Add space between the left and right sides */
-  border-radius: 8px; /* Optional: adds rounded corners */
+  margin-left: 10rem; /* Increased margin to move the container to the right */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds subtle shadow to create depth */
 }
 
 .login-logo {

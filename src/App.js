@@ -16,6 +16,13 @@ function App() {
   // Handle user login
   const handleLogin = (user) => {
     setUserInfo(user); // Set user info after login
+    localStorage.setItem("userInfo", JSON.stringify(user)); // Persist user info to localStorage
+  };
+
+  // Handle user logout
+  const handleLogout = () => {
+    setUserInfo(null); // Clear user info from state
+    localStorage.removeItem("userInfo"); // Remove user info from localStorage
   };
 
   // Add new booking to the allBookings state
@@ -23,20 +30,33 @@ function App() {
     setAllBookings((prevBookings) => [...prevBookings, bookingData]);
   };
 
+  // Check if user is already logged in when app loads
+  React.useEffect(() => {
+    const storedUserInfo = localStorage.getItem("userInfo");
+    if (storedUserInfo) {
+      setUserInfo(JSON.parse(storedUserInfo)); // Set user info from localStorage if available
+    }
+  }, []);
+
   return (
     <div className="App">
-      <Header />
+      <Header onLogout={handleLogout} />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-       path="/amenities"
+          path="/amenities"
           element={<Amenities setBookingInfo={handleNewBooking} />}
-       />
-
+        />
         <Route
           path="/profile"
-          element={<Profile userInfo={userInfo} allBookings={allBookings} />}
+          element={
+            userInfo ? (
+              <Profile userInfo={userInfo} allBookings={allBookings} />
+            ) : (
+              <Login onLogin={handleLogin} />
+            )
+          }
         />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
       </Routes>

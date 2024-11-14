@@ -91,7 +91,6 @@ function IntroSection({ userInfo, existingBooking }) {
       room: selectedRoom.name,
       cost: selectedRoom.cost,
       description: selectedRoom.description,
-      image: selectedRoom.image,
       bookingDate: bookingDate,
       bookingTime: bookingTime,  // Include time in booking data
       clientName: clientName,
@@ -138,7 +137,7 @@ function IntroSection({ userInfo, existingBooking }) {
       <p className="home-description">
         Guestrooms at our hotel offer luxury accommodation and relaxation...
       </p>
-      
+
       <div className="card-container">
         {rooms.map((room) => (
           <div key={room.id} className="card">

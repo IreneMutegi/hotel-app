@@ -1,6 +1,5 @@
-// src/components/Footer.js
 import React from "react";
-import "./Footer.css"; // Add a new CSS file for footer styling
+import "./Footer.css"; // Add the new CSS file for footer styling
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Footer() {

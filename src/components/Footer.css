@@ -1,77 +1,128 @@
-/* src/components/Footer.css */
-
+/* General Footer Styling */
 .footer {
-    background-color: #0077b6;  /* Ocean-like blue */
-    color: white;
-    padding: 20px 0;
-    font-family: Arial, sans-serif;
+  background-color: #005f73;  /* A deeper ocean-like blue */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px 0;  /* Reduced padding for a shorter height */
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px 10px;  /* Reduced padding for the container */
+}
+
+.footer-section {
+  margin-bottom: 15px;  /* Reduced bottom margin */
+  width: 230px;  /* Reduced width of sections */
+}
+
+.footer-section h3 {
+  font-size: 1.2em;  /* Slightly smaller font size */
+  margin-bottom: 10px;  /* Reduced margin between title and content */
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase; /* Make section headers more prominent */
+  letter-spacing: 1px;
+}
+
+.footer-section p {
+  font-size: 0.9em;  /* Reduced font size */
+  color: #b0e0e6;  /* Soft light blue */
+  line-height: 1.4;  /* Reduced line height */
+}
+
+.footer-section a {
+  color: #b0e0e6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;  /* Reduced space between links */
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline; /* Subtle hover effect */
+}
+
+/* Horizontal Alignment for Email Input and Subscribe Button */
+.email-subscribe-container {
+  display: flex;  /* Use flexbox for horizontal alignment */
+  justify-content: center;  /* Center the input and button */
+  align-items: center;  /* Vertically align them */
+  gap: 10px;  /* Space between input and button */
+}
+
+.email-input,
+.subscribe-button {
+  padding: 12px 20px;  /* Same padding for both elements */
+  font-size: 1em;  /* Same font size */
+  border-radius: 30px;
+  border: 2px solid #00b4d8;
+  background-color: #e0f7fa;
+  width: 45%;  /* Both elements take up equal space */
+}
+
+.subscribe-button {
+  background-color: #00b4d8;  /* Vibrant tropical blue */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #008c9e;  /* Darker blue on hover */
+}
+
+.social-icons a {
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;  /* Slightly smaller icons */
+  margin: 5px 0;  /* Reduced margin between social icons */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+  color: #00b4d8;
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+.footer-bottom {
+  background-color: #003c42;  /* Darker ocean blue */
+  padding: 10px 0;  /* Reduced padding */
+  font-size: 0.85em;  /* Reduced font size */
+  margin-top: 20px;  /* Reduced space before footer-bottom */
+  color: #ffffff;
+}
+
+.footer-bottom p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 90%;
     text-align: center;
   }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 20px;
-  }
-  
-  .footer-section {
-    margin-bottom: 20px;
-    width: 250px;
-  }
-  
-  .footer-section h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #f0f8ff;  /* Light sky blue for section titles */
-  }
-  
-  .footer-section p,
-  .footer-section form {
-    font-size: 1em;
-    margin-bottom: 10px;
-    color: #d6f5ff;  /* Light blue text */
-  }
-  
-  .email-input {
-    padding: 8px;
-    width: 70%;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #00b4d8;  /* Light blue border */
-    background-color: #e0f7fa;  /* Pale blue background */
-  }
-  
+
+  .email-input,
   .subscribe-button {
-    padding: 8px 15px;
-    background-color: #00b4d8;  /* Tropical blue */
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+    width: 90%;  /* Full width on small screens */
+    margin-bottom: 10px;  /* Space between email input and button on small screens */
   }
-  
-  .subscribe-button:hover {
-    background-color: #0098b8;  /* Darker blue for hover effect */
+
+  .email-subscribe-container {
+    flex-direction: column;  /* Stack the elements vertically on smaller screens */
   }
-  
-  .social-icons a {
-    display: block;
-    color: white;
-    margin: 5px 0;
-    font-size: 1em;
-    text-decoration: none;
-  }
-  
-  .social-icons a:hover {
-    color: #00b4d8;  /* Blue hover effect on social links */
-  }
-  
-  .footer-bottom {
-    background-color: #3b6c76;  /* Deeper ocean blue */
-    padding: 10px 0;
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #f0f8ff;  /* Light blue text for footer bottom */
-  }
-  
+}

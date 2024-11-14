@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import pool from "../assets/images/outdoorpool.jpeg";  // Example image
 import spa from "../assets/images/spaservice.jpeg";   // Example image
@@ -6,7 +6,7 @@ import gym from "../assets/images/fitness.jpeg";     // Example image
 import canoeing from "../assets/images/canoeing.jpeg"; // Example image
 import finedining from "../assets/images/finedining.jpeg"; // Example image
 import './Amenities.css'; 
-// Define amenitiesData or import it if stored externally
+
 const amenitiesData = [
   {
     emoji: '🌐',
@@ -53,15 +53,23 @@ const amenitiesData = [
   },
 ];
 
-const Amenities = ({ setBookingInfo }) => {
+const Amenities = ({ setBookingInfo, userInfo }) => {
   const [selectedAmenity, setSelectedAmenity] = useState(null);
   const [bookingDate, setBookingDate] = useState("");
   const [bookingTime, setBookingTime] = useState("");
-  const [clientName, setClientName] = useState("");
-  const [clientEmail, setClientEmail] = useState("");
+  const [clientName, setClientName] = useState(userInfo?.name || ""); // Prefill name from userInfo
+  const [clientEmail, setClientEmail] = useState(userInfo?.email || ""); // Prefill email from userInfo
   const [wifiPassword, setWifiPassword] = useState(null);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  // Update clientName and clientEmail when userInfo changes
+  useEffect(() => {
+    if (userInfo) {
+      setClientName(userInfo.name);
+      setClientEmail(userInfo.email);
+    }
+  }, [userInfo]);
 
   const handleBookingClick = (amenity) => {
     setSelectedAmenity(amenity);
@@ -72,8 +80,9 @@ const Amenities = ({ setBookingInfo }) => {
     setWifiPassword('WiFi1234');
   };
 
-  const handleBookingSubmit = (e) => {
+  const handleBookingSubmit = async (e) => {
     e.preventDefault();
+
     if (selectedAmenity && bookingDate && bookingTime && clientName && clientEmail) {
       const bookingDetails = {
         amenity: selectedAmenity.title,
@@ -83,10 +92,27 @@ const Amenities = ({ setBookingInfo }) => {
         clientEmail,
       };
 
-      setBookingInfo(bookingDetails); // Corrected to match the prop name
+      // POST request to save booking details
+      try {
+        const response = await fetch("http://localhost:5000/bookings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(bookingDetails),
+        });
 
-      alert(`Booking confirmed for ${selectedAmenity.title} on ${bookingDate} at ${bookingTime}`);
-      navigate("/profile");
+        if (!response.ok) {
+          setError("Failed to submit booking");
+        } else {
+          const data = await response.json();  // Assuming the API sends back the saved data
+          setBookingInfo(data); // Pass the saved data to the parent component (if needed)
+          alert(`Booking confirmed for ${selectedAmenity.title} on ${bookingDate} at ${bookingTime}`);
+          navigate("/profile");
+        }
+      } catch (error) {
+        setError("Error submitting booking");
+      }
     } else {
       setError("Please fill all fields and select an amenity.");
     }
