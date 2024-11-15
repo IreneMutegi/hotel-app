@@ -11,7 +11,7 @@ function Login({ onLogin }) {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null); // State for handling errors
+  const [error, setError] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [slide1, slide2, slide3];
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Login({ onLogin }) {
     e.preventDefault();
 
     if (!name || !username || !password) {
-      setError("Please fill out all fields"); // Set error message
+      setError("Please fill out all fields");
       return;
     }
 
@@ -38,9 +38,12 @@ function Login({ onLogin }) {
         localStorage.setItem("clientName", user.name);
         localStorage.setItem("clientUsername", user.username);
         onLogin(user);
+        setName("");
+        setUsername("");
+        setPassword("");
         navigate("/profile");
       } else {
-        setError("Login failed. Please check your credentials."); // Update error message on failure
+        setError("Login failed. Please check your credentials.");
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -93,7 +96,7 @@ function Login({ onLogin }) {
           />
           <a href="#" className="forgot-password">Forgot password?</a>
 
-          {error && <div className="error-message">{error}</div>} {/* Error message */}
+          {error && <div className="error-message">{error}</div>}
 
           <button type="submit" className="login-button">Login</button>
         </form>

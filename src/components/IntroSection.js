@@ -109,11 +109,11 @@ function IntroSection({ userInfo, existingBooking }) {
 
       if (response.ok) {
         alert(`Booking confirmed for "${selectedRoom.name}" on ${bookingDate} at ${bookingTime}`);
-        setSelectedRoom(null); // Clear the selected room after booking
-        setBookingDate(''); // Reset date after booking
-        setBookingTime(''); // Reset time after booking
-        setClientName(''); // Clear name
-        setClientEmail(''); // Clear email
+        setSelectedRoom(null); 
+        setBookingDate(''); 
+        setBookingTime(''); 
+        setClientName(''); 
+        setClientEmail(''); 
       } else {
         alert('Booking failed. Please try again.');
       }

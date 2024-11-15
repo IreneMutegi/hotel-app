@@ -14,11 +14,11 @@ function Profile() {
     const userEmail = localStorage.getItem("clientUsername");
 
     if (userName && userEmail) {
-      // Fetch user details
+      // Set user details
       setUser({ name: userName, email: userEmail });
 
       // Fetch bookings related to this user
-      fetch(`http://localhost:5000/bookings?clientEmail=${userEmail}`)
+      fetch(`https://hotel-app-75bj.onrender.com/bookings?clientEmail=${userEmail}`)
         .then((response) => response.json())
         .then((data) => {
           setBookings(data);
@@ -49,7 +49,7 @@ function Profile() {
   };
 
   const handleSaveEdit = (id) => {
-    fetch(`http://localhost:5000/bookings/${id}`, {
+    fetch(`https://hotel-app-75bj.onrender.com/bookings/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ function Profile() {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/bookings/${id}`, {
+    fetch(`https://hotel-app-75bj.onrender.com/bookings/${id}`, {
       method: "DELETE",
     })
       .then(() => {
